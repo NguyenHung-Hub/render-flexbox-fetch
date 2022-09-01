@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #d1d1d1;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(171, 171, 171);
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgb(255, 255, 255);
+}
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+
+    box-shadow: 3px 4px 13px -3px rgba(82, 82, 82, 0.5);
+
+    overflow: hidden;
+}
+.chat-box-top {
+    padding: 8px;
+    color: crimson;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+.chat-box-center {
+    /* flex: 1; */
+    /* flex-direction: column; */
+    height: 100%;
+    overflow-y: scroll;
+}
+.messages {
+    /* width: 100%; */
+}
+.message {
+    display: flex;
+}
+.message-content {
+    max-width: 48%;
+    margin: 4px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    color: #000;
+}
+
+#you {
+    justify-content: flex-end;
+}
+
+#other {
+    /* justify-content: flex-start; */
+}
+#you .message-content {
+    /* justify-content: flex-end; */
+}
+
+#other .message-content {
+    /* justify-content: flex-start; */
+}
+
+.chat-box-bottom {
+    display: flex;
+    padding: 8px;
+}
+.chat-input {
+    flex: 1;
+
+    margin-right: 8px;
+    padding: 0 8px;
+
+    font-size: 16px;
+
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+.chat-input:focus {
+    outline: none;
+}
+.submit-btn {
+    padding: 8px 16px;
+
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+
+    color: white;
+    background-color: rgb(32, 110, 255);
+
+    cursor: pointer;
+}
